@@ -10,6 +10,7 @@ public class ContaCorrente extends Conta {
             historico.add("Saque: R$" + valor);
         } else {
             System.out.println("Saldo insuficiente!");
+            historico.add("Falha no saque: saldo insuficiente");
         }
     }
 }
