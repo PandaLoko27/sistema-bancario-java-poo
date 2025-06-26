@@ -5,7 +5,7 @@ public class Main {
         SistemaBancario sistema = new SistemaBancario();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("=== Bem-vindo ao Sistema Bancário ===");
+        System.out.println("=== Bem-vindo ao Otavio's Bank ===");
 
         boolean rodando = true;
         while (rodando) {
@@ -22,13 +22,13 @@ public class Main {
             try {
                 opcao = Integer.parseInt(scanner.nextLine());
             } catch (NumberFormatException e) {
-                System.out.println("Opção inválida. Tente novamente.");
+                System.out.println("\nOpção inválida. Tente novamente.");
                 continue;
             }
 
             switch (opcao) {
                 case 1:
-                    System.out.print("Nome do cliente: ");
+                    System.out.print("\nNome do cliente: ");
                     String nome = scanner.nextLine();
                     System.out.print("CPF do cliente: ");
                     String cpf = scanner.nextLine();
@@ -36,11 +36,11 @@ public class Main {
                     String numeroConta = scanner.nextLine();
 
                     sistema.criarConta(nome, cpf, numeroConta);
-                    System.out.println("Conta criada com sucesso!");
+                    System.out.println("\nConta criada com sucesso!");
                     break;
 
                 case 2:
-                    System.out.print("Número da conta para depósito: ");
+                    System.out.print("\nNúmero da conta para depósito: ");
                     String contaDeposito = scanner.nextLine();
                     Conta contaDep = sistema.buscarConta(contaDeposito);
                     if (contaDep != null) {
@@ -48,17 +48,17 @@ public class Main {
                         try {
                             double valorDep = Double.parseDouble(scanner.nextLine());
                             contaDep.depositar(valorDep);
-                            System.out.println("Depósito realizado com sucesso!");
+                            System.out.println("\nDepósito realizado com sucesso!");
                         } catch (NumberFormatException e) {
-                            System.out.println("Valor inválido.");
+                            System.out.println("\nValor inválido.");
                         }
                     } else {
-                        System.out.println("Conta não encontrada!");
+                        System.out.println("\nConta não encontrada!");
                     }
                     break;
 
                 case 3:
-                    System.out.print("Número da conta para saque: ");
+                    System.out.print("\nNúmero da conta para saque: ");
                     String contaSaque = scanner.nextLine();
                     Conta contaSaq = sistema.buscarConta(contaSaque);
                     if (contaSaq != null) {
@@ -67,15 +67,15 @@ public class Main {
                             double valorSaq = Double.parseDouble(scanner.nextLine());
                             contaSaq.sacar(valorSaq);
                         } catch (NumberFormatException e) {
-                            System.out.println("Valor inválido.");
+                            System.out.println("\nValor inválido.");
                         }
                     } else {
-                        System.out.println("Conta não encontrada!");
+                        System.out.println("\nConta não encontrada!");
                     }
                     break;
 
                 case 4:
-                    System.out.print("Número da conta origem: ");
+                    System.out.print("\nNúmero da conta origem: ");
                     String contaOrigem = scanner.nextLine();
                     System.out.print("Número da conta destino: ");
                     String contaDestino = scanner.nextLine();
@@ -83,53 +83,53 @@ public class Main {
                     try {
                         double valorPix = Double.parseDouble(scanner.nextLine());
                         sistema.realizarPIX(contaOrigem, contaDestino, valorPix);
-                        System.out.println("Transferência realizada (se saldo suficiente e contas válidas).");
+                        System.out.println("\nTransferência realizada (se saldo suficiente e contas válidas).");
                     } catch (NumberFormatException e) {
                         System.out.println("Valor inválido.");
                     }
                     break;
 
                 case 5:
-                    System.out.print("Número da conta para investimento: ");
+                    System.out.print("\nNúmero da conta para investimento: ");
                     String contaInv = scanner.nextLine();
                     Conta contaInvest = sistema.buscarConta(contaInv);
                     if (contaInvest != null) {
                         System.out.print("Valor para investir: ");
                         try {
                             double valorInvest = Double.parseDouble(scanner.nextLine());
-                            System.out.print("Rendimento mensal (ex: 0.02 para 2%): ");
+                            System.out.print("\nRendimento mensal (ex: 0.02 para 2%): ");
                             double rendimento = Double.parseDouble(scanner.nextLine());
                             System.out.print("Meses para simular: ");
                             int meses = Integer.parseInt(scanner.nextLine());
 
                             sistema.investir(contaInv, valorInvest, rendimento, meses);
-                            System.out.println("Investimento realizado e lucro aplicado.");
+                            System.out.println("\nInvestimento realizado e lucro aplicado.");
                         } catch (NumberFormatException e) {
-                            System.out.println("Valor ou meses inválidos.");
+                            System.out.println("\nValor ou meses inválidos.");
                         }
                     } else {
-                        System.out.println("Conta não encontrada!");
+                        System.out.println("\nConta não encontrada!");
                     }
                     break;
 
                 case 6:
-                    System.out.print("Número da conta para mostrar histórico: ");
+                    System.out.print("\nNúmero da conta para mostrar histórico: ");
                     String contaHist = scanner.nextLine();
                     Conta contaHistEx = sistema.buscarConta(contaHist);
                     if (contaHistEx != null) {
                         contaHistEx.exibirHistorico();
                     } else {
-                        System.out.println("Conta não encontrada!");
+                        System.out.println("\nConta não encontrada!");
                     }
                     break;
 
                 case 0:
                     rodando = false;
-                    System.out.println("Obrigado por usar o sistema. Até mais!");
+                    System.out.println("\nObrigado por usar o Otavio's Bank. Até mais!");
                     break;
 
                 default:
-                    System.out.println("Opção inválida.");
+                    System.out.println("\nOpção inválida.");
                     break;
             }
         }
