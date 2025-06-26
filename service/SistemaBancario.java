@@ -19,6 +19,8 @@ public class SistemaBancario {
         Conta contaDestino = buscarConta(destino);
         if (contaOrigem != null && contaDestino != null) {
             contaOrigem.transferir(contaDestino, valor);
+        } else {
+            System.out.println("Conta origem ou destino não encontrada!");
         }
     }
 
@@ -29,7 +31,9 @@ public class SistemaBancario {
             Investimento investimento = new Investimento(valor, rendimento);
             double lucro = investimento.simularLucro(meses);
             conta.depositar(valor + lucro);
-            conta.historico.add("Investimento: lucro de R$" + lucro);
+            conta.historico.add("Investimento: lucro de R$" + String.format("%.2f", lucro));
+        } else {
+            System.out.println("Conta não encontrada ou saldo insuficiente para investir.");
         }
     }
 }
