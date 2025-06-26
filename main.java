@@ -3,7 +3,7 @@ public class Main {
         SistemaBancario sistema = new SistemaBancario();
 
         sistema.criarConta("Otávio", "12345678900", "001");
-        sistema.criarConta("João", "98765432100", "002");
+        sistema.criarConta("Pedro", "98765432100", "002");
 
         Conta conta1 = sistema.buscarConta("001");
         Conta conta2 = sistema.buscarConta("002");
