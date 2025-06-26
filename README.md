@@ -18,11 +18,11 @@ Este é um projeto de simulação de um sistema bancário simples, desenvolvido 
 - Simulação de investimento com rendimento mensal
 - Histórico de transações
 
-## 🏗️ Arquitetura
+## 🏗️ Arquitetura do projeto
 
-- **model**: Classes principais do sistema (Conta, Cliente, Investimento)
-- **service**: Lógica de negócio (SistemaBancario)
 - **main**: Ponto de entrada da aplicação (Main.java)
+- **model**: Classes principais do sistema (Conta, ContaCorrente, Cliente & Investimento)
+- **service**: Lógica de negócio (SistemaBancario)
 
 ---
 
