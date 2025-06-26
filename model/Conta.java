@@ -14,6 +14,7 @@ public abstract class Conta {
     }
 
     public abstract void sacar(double valor);
+
     public void depositar(double valor) {
         saldo += valor;
         historico.add("Depósito: R$" + valor);
@@ -24,6 +25,9 @@ public abstract class Conta {
             this.sacar(valor);
             destino.depositar(valor);
             historico.add("Transferência PIX para " + destino.getNumeroConta() + ": R$" + valor);
+        } else {
+            historico.add("Falha na transferência PIX para " + destino.getNumeroConta() + ": saldo insuficiente");
+            System.out.println("Saldo insuficiente para transferência!");
         }
     }
 
