@@ -1,2 +1,27 @@
-# sistema-bancario-java-poo
-Projeto feito no Bootcamp da DIO [NTT DATA - Java e IA para Iniciantes]
+# 💻 Sistema Bancário em Java - POO
+
+Este é um projeto de simulação de um sistema bancário simples, desenvolvido em Java para consolidar os principais conceitos de Programação Orientada a Objetos (POO), como:
+
+- ✔️ Herança
+- ✔️ Encapsulamento
+- ✔️ Polimorfismo
+- ✔️ Abstração
+- ✔️ Reutilização de código
+
+## 📦 Funcionalidades
+
+- Criação de contas e clientes
+- Depósito e saque
+- Transferência via PIX
+- Simulação de investimento com rendimento mensal
+- Histórico de transações
+
+## 🏗️ Arquitetura
+
+- **model**: Classes principais do sistema (Conta, Cliente, Investimento)
+- **service**: Lógica de negócio (SistemaBancario)
+- **main**: Ponto de entrada da aplicação (Main.java)
+
+---
+
+Feito com ☕ por Otávio Guedes
