@@ -26,4 +26,11 @@ Este é um projeto de simulação de um sistema bancário simples, desenvolvido 
 
 ---
 
+
+## 📝 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
 Feito com ☕ por Otávio Guedes
