@@ -22,7 +22,7 @@ Este é um projeto de simulação de um sistema bancário simples, desenvolvido 
 
 - **main**: Ponto de entrada da aplicação (Main.java)
 - **model**: Classes principais do sistema (Conta, ContaCorrente, Cliente & Investimento)
-- **service**: Lógica de negócio (SistemaBancario)
+- **service**: Lógica do sistema (SistemaBancario)
 
 ---
 
