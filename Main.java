@@ -13,7 +13,7 @@ public class Main {
             System.out.println("1 - Criar conta");
             System.out.println("2 - Depositar");
             System.out.println("3 - Sacar");
-            System.out.println("4 - Transferência PIX");
+            System.out.println("4 - Transferência via PIX");
             System.out.println("5 - Investir");
             System.out.println("6 - Mostrar histórico");
             System.out.println("0 - Sair");
@@ -40,7 +40,7 @@ public class Main {
                     break;
 
                 case 2:
-                    System.out.print("\nNúmero da conta para depósito: ");
+                    System.out.print("\nNúmero da conta para a realização do depósito: ");
                     String contaDeposito = scanner.nextLine();
                     Conta contaDep = sistema.buscarConta(contaDeposito);
                     if (contaDep != null) {
@@ -58,7 +58,7 @@ public class Main {
                     break;
 
                 case 3:
-                    System.out.print("\nNúmero da conta para saque: ");
+                    System.out.print("\nNúmero da conta para a realização do saque: ");
                     String contaSaque = scanner.nextLine();
                     Conta contaSaq = sistema.buscarConta(contaSaque);
                     if (contaSaq != null) {
